@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monopoly Banking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./../output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins";
+      }
+    </style>
+  </head>
+  <body class="">
+    <div
+      class="mx-auto w-fit py-1 px-8 border-4 mt-10 text-red-600 border-red-600 rounded-xl shadow-lg shadow-red-500/50"
+    >
+      <h1 class="text-5xl font-semibold">MONOPOLY</h1>
+    </div>
+    <div
+      class="bg-blue-600 mx-auto w-fit px-10 py-0.5 border-4 border-blue-700 -mt-2 -rotate-3 rounded-md shadow-lg shadow-blue-500/50"
+    >
+      <h1 class="text-xl text-white font-bold">RFID CARD BANKING EDITION</h1>
+    </div>
+    <div class="flex gap-8 w-8/12 mx-auto mt-20">
+      <div class="w-4/12 m-">
+        <div
+          class="bg-green-600 py-2 px-5 border-4 border-green-700 rounded-lg text-white shadow-md shadow-green-500/20 hover:scale-105 transition-all hover:bg-green-500/50 group hover:border-green-600 hover:shadow-lg hover:shadow-green-500/50"
+        >
+          <p
+            class="font-bold group-hover:text-green-600 text-2xl text-center flex place-items-center justify-center"
+          >
+            PASS GO
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5 inline stroke-2 ml-3"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+              />
+            </svg>
+          </p>
+        </div>
+        <div
+          class="mt-5 border-4 border-blue-700 mx-auto shadow-blue-500/20 rounded-lg py-4 px-4 shadow-lg transition-all"
+        >
+        
+          <div
+            class="hover:scale-105 transition-all hover:bg-blue-700 hover:shadow-md hover:shadow-blue-500/50 hover:border-blue-800 bg-blue-600 p-2 font-medium text-white rounded-sm border-4 border-blue-700 group-hover:border-blue-600 group-hover:bg-white group-hover:text-red-600"
+          >
+            <p class="drop-shadow-md text-3xl text-center font-bold">
+              PLAYER TRANSFER
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-3 mt-5">
+            <div
+              class="h-32 bg-slate-500/20 mt-4 border-4 border-dashed border-slate-400 text-slate-500 rounded-3xl flex place-items-center justify-center font-bold"
+            >
+              sender
+            </div>
+            <div
+              class="h-32 bg-slate-500/20 mt-4 border-4 border-dashed border-slate-400 text-slate-500 rounded-3xl flex place-items-center justify-center font-bold"
+            >
+              receiver
+            </div>
+          </div>
+          <div class="flex mt-8 gap-2">
+            <div class="w-4/6">
+              <input
+                type="number"
+                placeholder="Enter Amount"
+                class="w-full border-4 py-1 px-3 font-bold rounded-md border-violet-600 bg-violet-500/50 placeholder-violet-600 text-white"
+              />
+            </div>
+
+            <button
+              class="w-2/6 text-lg border-violet-600 border-4 rounded-lg font-bold bg-violet-500 text-white hover:bg-violet-600 hover:border-violet-700 hover:scale-105 transition-all shadow-md shadow-violet-500/50 hover:shadow-violet-500/60 hover:shadow-lg"
+            >
+              Submit
+            </button>
+          </div>
+
+          <!-- <div
+            class="bg-red-600 p-2 font-medium text-white rounded-sm border-4 border-red-700 group-hover:border-red-600 group-hover:bg-white group-hover:text-red-600"
+          >
+            <p class="drop-shadow-md text-3xl text-center font-bold">BANK</p>
+          </div>
+          <div class="flex w-full gap-2 mt-5">
+            <button
+              class="w-1/2 hover: hover:bg-blue-700 hover:border-blue-800 transition-all bg-blue-600 rounded-lg py-1 text-xl font-bold text-white border-4 border-blue-700 mt-3"
+            >
+              PAY
+            </button>
+            <button
+              class="w-1/2 hover:bg-blue-500/50 hover:border-blue-800 transition-all rounded-lg py-1 text-xl font-bold text-blue-600 border-4 border-blue-700 mt-3"
+            >
+              RECEIVE
+            </button>
+          </div>
+          <div
+            class="h-32 bg-slate-500/20 mt-4 border-4 border-dashed border-slate-400 text-slate-500 rounded-3xl flex place-items-center justify-center font-bold"
+          >
+            scan
+          </div>
+          <div class="flex mt-8 gap-2">
+            <div class="w-4/6">
+            <input
+              type="number"
+              placeholder="Enter Amount"
+              class="w-full border-4 py-1 px-3 font-bold rounded-md border-violet-600 bg-violet-500/50 placeholder-violet-600 text-white"
+            />
+          </div>
+
+          <button
+            class="w-2/6 text-lg border-violet-600  border-4 rounded-lg font-bold bg-violet-500 text-white hover:bg-violet-600 hover:border-violet-700 hover:scale-105 transition-all shadow-md shadow-violet-500/50 hover:shadow-violet-500/60 hover:shadow-lg"
+          >
+            Submit
+          </button>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="w-4/6">
+        <table class="table-auto w-full text-center font-semibold">
+          <thead class="text-white text-lg">
+            <tr>
+              <th class="*:m-2">
+                <div
+                  class="bg-violet-600 rounded-lg border-s-4 border-4 border-b-4 border-violet-700 shadow-md shadow-violet-500/50"
+                >
+                  Type
+                </div>
+              </th>
+              <th class="*:m-2">
+                <div
+                  class="bg-violet-600 rounded-lg border-4 border-violet-700 shadow-md shadow-violet-500/50"
+                >
+                  Sender
+                </div>
+              </th>
+              <th class="*:m-2">
+                <div
+                  class="bg-violet-600 rounded-lg border-4 border-violet-700 shadow-md shadow-violet-500/50"
+                >
+                  Receiver
+                </div>
+              </th>
+              <th class="*:m-2">
+                <div
+                  class="bg-violet-600 rounded-lg border-4 border-violet-700 shadow-md shadow-violet-500/50"
+                >
+                  Amount
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <td class="text-blue-600 drop-shadow-lg shadow-blue-600/50">
+                Transfer
+              </td>
+              <td class="text-teal-600 drop-shadow-lg shadow-teal-600/50 font-medium">
+                player 1
+              </td>
+              <td class="text-orange-600 drop-shadow-lg shadow-orange-600/50">
+                player 2
+              </td>
+              <td class="text-blue-600 drop-shadow-lg shadow-blue-600/50">
+                15000
+              </td>
+            </tr>
+            <tr>
+              <td class="text-red-600 drop-shadow-lg shadow-red-600/50">
+                Bank
+              </td>
+              <td class="text-violet-600 drop-shadow-lg shadow-violet-600/50">
+                user
+              </td>
+              <td class="text-red-600 drop-shadow-lg shadow-red-600/50">-</td>
+              <td class="text-red-600 drop-shadow-lg shadow-red-600/50">
+                3000
+              </td>
+            </tr>
+            <tr>
+              <td class="text-blue-600 drop-shadow-lg shadow-blue-600/50">
+                Transfer
+              </td>
+              <td class="text-yellow-600 drop-shadow-lg shadow-yellow-600/50">
+                player 1
+              </td>
+              <td class="text-lime-600 drop-shadow-lg shadow-lime-600/50">
+                player 2
+              </td>
+              <td class="text-blue-600 drop-shadow-lg shadow-blue-600/50">
+                15000
+              </td>
+            </tr>
+            <tr>
+              <td class="text-green-600 drop-shadow-lg shadow-green-600/50">
+                Pass GO
+              </td>
+              <td class="text-green-600 drop-shadow-lg shadow-green-600/50">
+                -
+              </td>
+              <td class="text-pink-600 drop-shadow-lg shadow-pink-600/50">
+                meeee
+              </td>
+              <td class="text-green-600 drop-shadow-lg shadow-green-600/50">
+                2000
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+  </body>
+</html>
