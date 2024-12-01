@@ -57,8 +57,8 @@
         <div
           class="mt-5 border-4 border-blue-700 mx-auto shadow-blue-500/20 rounded-lg py-4 px-4 shadow-lg transition-all"
         >
-        
           <div
+            id="transferDiv"
             class="hover:scale-105 transition-all hover:bg-blue-700 hover:shadow-md hover:shadow-blue-500/50 hover:border-blue-800 bg-blue-600 p-2 font-medium text-white rounded-sm border-4 border-blue-700 group-hover:border-blue-600 group-hover:bg-white group-hover:text-red-600"
           >
             <p class="drop-shadow-md text-3xl text-center font-bold">
@@ -67,12 +67,14 @@
           </div>
           <div class="grid grid-cols-2 gap-3 mt-5">
             <div
-              class="h-32 bg-slate-500/20 mt-4 border-4 border-dashed border-slate-400 text-slate-500 rounded-3xl flex place-items-center justify-center font-bold"
+              id="senderRFID"
+              class="hover:scale-105 transition-all hover:shadow-md cursor-pointer h-32 bg-slate-500/20 mt-4 border-4 border-dashed border-slate-400 text-slate-500 rounded-3xl flex place-items-center justify-center font-bold"
             >
               sender
             </div>
             <div
-              class="h-32 bg-slate-500/20 mt-4 border-4 border-dashed border-slate-400 text-slate-500 rounded-3xl flex place-items-center justify-center font-bold"
+              id="receiverRFID"
+              class="hover:scale-105 transition-all hover:shadow-md cursor-pointer h-32 bg-slate-500/20 mt-4 border-4 border-dashed border-slate-400 text-slate-500 rounded-3xl flex place-items-center justify-center font-bold"
             >
               receiver
             </div>
@@ -80,9 +82,10 @@
           <div class="flex mt-8 gap-2">
             <div class="w-4/6">
               <input
+                id="amount"
                 type="number"
                 placeholder="Enter Amount"
-                class="w-full border-4 py-1 px-3 font-bold rounded-md border-violet-600 bg-violet-500/50 placeholder-violet-600 text-white"
+                class="hover:bg-violet-500/60 focus:outline-none focus:ring-2 focus:ring-violet-700 w-full border-4 py-1 px-3 font-bold rounded-md border-violet-600 bg-violet-500/50 placeholder-violet-600 text-white"
               />
             </div>
 
@@ -92,44 +95,6 @@
               Submit
             </button>
           </div>
-
-          <!-- <div
-            class="bg-red-600 p-2 font-medium text-white rounded-sm border-4 border-red-700 group-hover:border-red-600 group-hover:bg-white group-hover:text-red-600"
-          >
-            <p class="drop-shadow-md text-3xl text-center font-bold">BANK</p>
-          </div>
-          <div class="flex w-full gap-2 mt-5">
-            <button
-              class="w-1/2 hover: hover:bg-blue-700 hover:border-blue-800 transition-all bg-blue-600 rounded-lg py-1 text-xl font-bold text-white border-4 border-blue-700 mt-3"
-            >
-              PAY
-            </button>
-            <button
-              class="w-1/2 hover:bg-blue-500/50 hover:border-blue-800 transition-all rounded-lg py-1 text-xl font-bold text-blue-600 border-4 border-blue-700 mt-3"
-            >
-              RECEIVE
-            </button>
-          </div>
-          <div
-            class="h-32 bg-slate-500/20 mt-4 border-4 border-dashed border-slate-400 text-slate-500 rounded-3xl flex place-items-center justify-center font-bold"
-          >
-            scan
-          </div>
-          <div class="flex mt-8 gap-2">
-            <div class="w-4/6">
-            <input
-              type="number"
-              placeholder="Enter Amount"
-              class="w-full border-4 py-1 px-3 font-bold rounded-md border-violet-600 bg-violet-500/50 placeholder-violet-600 text-white"
-            />
-          </div>
-
-          <button
-            class="w-2/6 text-lg border-violet-600  border-4 rounded-lg font-bold bg-violet-500 text-white hover:bg-violet-600 hover:border-violet-700 hover:scale-105 transition-all shadow-md shadow-violet-500/50 hover:shadow-violet-500/60 hover:shadow-lg"
-          >
-            Submit
-          </button>
-          </div> -->
         </div>
       </div>
 
@@ -172,7 +137,9 @@
               <td class="text-blue-600 drop-shadow-lg shadow-blue-600/50">
                 Transfer
               </td>
-              <td class="text-teal-600 drop-shadow-lg shadow-teal-600/50 font-medium">
+              <td
+                class="text-teal-600 drop-shadow-lg shadow-teal-600/50 font-medium"
+              >
                 player 1
               </td>
               <td class="text-orange-600 drop-shadow-lg shadow-orange-600/50">
@@ -226,6 +193,7 @@
         </table>
       </div>
     </div>
-    
+    <input type="number" id="rfid" />
+    <script src="../js/playertransfer.js"></script>
   </body>
 </html>
