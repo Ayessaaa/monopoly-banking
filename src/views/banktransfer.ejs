@@ -29,11 +29,13 @@
     >
       <h1 class="text-xl text-white font-bold">RFID CARD BANKING EDITION</h1>
     </div>
+
     <div class="flex gap-8 w-8/12 mx-auto mt-20">
       <div class="w-4/12 m-">
-        <div
+        <div id="passgo"
           class="bg-green-600 py-2 px-5 border-4 border-green-700 rounded-lg text-white shadow-md shadow-green-500/20 hover:scale-105 transition-all hover:bg-green-500/50 group hover:border-green-600 hover:shadow-lg hover:shadow-green-500/50"
         >
+        
           <p
             class="font-bold group-hover:text-green-600 text-2xl text-center flex place-items-center justify-center"
           >
@@ -61,7 +63,7 @@
           <div id="bankDiv"
             class="hover:scale-105 transition-all hover:bg-red-700 hover:shadow-md hover:shadow-red-500/50 hover:border-red-800 bg-red-600 p-2 font-medium text-white rounded-sm border-4 border-red-700 group-hover:border-red-600 group-hover:bg-white group-hover:text-red-600"
           >
-            <p class="drop-shadow-md text-3xl text-center font-bold">BANK</p>
+            <p class="cursor-pointer drop-shadow-md text-3xl text-center font-bold">BANK</p>
           </div>
           <div class="flex w-full gap-2 mt-5">
             <button id="payButton"
@@ -95,6 +97,9 @@
               Submit
             </button>
           </div>
+        </div>
+        <div class="flex gap-3 mt-10" id="balanceDiv">
+          
         </div>
       </div>
 
@@ -152,7 +157,8 @@
         </table>
       </div>
     </div>
-    <input type="number" id="rfid" />
+    <input type="number" class="text-white focus:outline-none cursor-default [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" id="rfid" /><br>
+    <input type="number" class="text-white focus:outline-none cursor-default [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" id="passgoRFID" />
     <script src="../js/banktransfer.js"></script>
   </body>
 </html>

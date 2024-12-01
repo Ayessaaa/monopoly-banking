@@ -31,7 +31,7 @@
     </div>
     <div class="flex gap-8 w-8/12 mx-auto mt-20">
       <div class="w-4/12 m-">
-        <div
+        <div id="passgo"
           class="bg-green-600 py-2 px-5 border-4 border-green-700 rounded-lg text-white shadow-md shadow-green-500/20 hover:scale-105 transition-all hover:bg-green-500/50 group hover:border-green-600 hover:shadow-lg hover:shadow-green-500/50"
         >
           <p
@@ -59,7 +59,7 @@
         >
           <div
             id="transferDiv"
-            class="hover:scale-105 transition-all hover:bg-blue-700 hover:shadow-md hover:shadow-blue-500/50 hover:border-blue-800 bg-blue-600 p-2 font-medium text-white rounded-sm border-4 border-blue-700 group-hover:border-blue-600 group-hover:bg-white group-hover:text-red-600"
+            class="cursor-pointer hover:scale-105 transition-all hover:bg-blue-700 hover:shadow-md hover:shadow-blue-500/50 hover:border-blue-800 bg-blue-600 p-2 font-medium text-white rounded-sm border-4 border-blue-700 group-hover:border-blue-600 group-hover:bg-white group-hover:text-red-600"
           >
             <p class="drop-shadow-md text-3xl text-center font-bold">
               PLAYER TRANSFER
@@ -89,12 +89,14 @@
               />
             </div>
 
-            <button
+            <button id="submitButton"
               class="w-2/6 text-lg border-violet-600 border-4 rounded-lg font-bold bg-violet-500 text-white hover:bg-violet-600 hover:border-violet-700 hover:scale-105 transition-all shadow-md shadow-violet-500/50 hover:shadow-violet-500/60 hover:shadow-lg"
             >
               Submit
             </button>
           </div>
+        </div>
+        <div class="flex gap-3 mt-10 " id="balanceDiv">
         </div>
       </div>
 
@@ -132,68 +134,14 @@
               </th>
             </tr>
           </thead>
-          <tbody>
-            <tr class="">
-              <td class="text-blue-600 drop-shadow-lg shadow-blue-600/50">
-                Transfer
-              </td>
-              <td
-                class="text-teal-600 drop-shadow-lg shadow-teal-600/50 font-medium"
-              >
-                player 1
-              </td>
-              <td class="text-orange-600 drop-shadow-lg shadow-orange-600/50">
-                player 2
-              </td>
-              <td class="text-blue-600 drop-shadow-lg shadow-blue-600/50">
-                15000
-              </td>
-            </tr>
-            <tr>
-              <td class="text-red-600 drop-shadow-lg shadow-red-600/50">
-                Bank
-              </td>
-              <td class="text-violet-600 drop-shadow-lg shadow-violet-600/50">
-                user
-              </td>
-              <td class="text-red-600 drop-shadow-lg shadow-red-600/50">-</td>
-              <td class="text-red-600 drop-shadow-lg shadow-red-600/50">
-                3000
-              </td>
-            </tr>
-            <tr>
-              <td class="text-blue-600 drop-shadow-lg shadow-blue-600/50">
-                Transfer
-              </td>
-              <td class="text-yellow-600 drop-shadow-lg shadow-yellow-600/50">
-                player 1
-              </td>
-              <td class="text-lime-600 drop-shadow-lg shadow-lime-600/50">
-                player 2
-              </td>
-              <td class="text-blue-600 drop-shadow-lg shadow-blue-600/50">
-                15000
-              </td>
-            </tr>
-            <tr>
-              <td class="text-green-600 drop-shadow-lg shadow-green-600/50">
-                Pass GO
-              </td>
-              <td class="text-green-600 drop-shadow-lg shadow-green-600/50">
-                -
-              </td>
-              <td class="text-pink-600 drop-shadow-lg shadow-pink-600/50">
-                meeee
-              </td>
-              <td class="text-green-600 drop-shadow-lg shadow-green-600/50">
-                2000
-              </td>
-            </tr>
+          <tbody id="tbody">
+           
           </tbody>
         </table>
       </div>
     </div>
-    <input type="number" id="rfid" />
+    <input type="number" class="text-white focus:outline-none cursor-default [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" id="rfid" /><br>
+    <input type="number" class="text-white focus:outline-none cursor-default [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" id="passgoRFID" />
     <script src="../js/playertransfer.js"></script>
   </body>
 </html>
